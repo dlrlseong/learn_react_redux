@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from "react-redux/es/exports";
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counter.counter);
 
-  const show = useSelector((state) => state.showCounter);
+  const show = useSelector((state) => state.counter.showCounter);
 
   const increaseHandler = () => {
     dispatch(counterActions.increase(10));
